@@ -24,5 +24,5 @@ Sadly, he can only pay you for a week of work, which won’t be enough time to i
 
 Thank you for reading. :coffee:
 
-![Coffee cat gif](gyphy.cat.webp "Coffee cat gif")
+![Coffee cat gif](gyphy.gif "Coffee cat gif")
 
