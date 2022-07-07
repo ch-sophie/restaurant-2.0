@@ -33,7 +33,7 @@ include_once('elements/header.php');
         <div class="form-group mb-3">
             <input type="text" name="visit" placeholder="Which cafe did you visit?" class="form-control">
         </div>
-        <button class="btn btn-warning mt-3">Send message</button>
+        <button class="btn btn-warning text-white mt-3">Send message</button>
     </form>
 
     <h4 class="mt-4">Your messages: </h4>
