@@ -14,7 +14,7 @@ class Message {
     }
     // str length
     public function isValid (): bool {
-        return strlen($this->username) >= 2 && strlen($this->message) >= 5 && strlen($this->visit) >= 5;
+        return strlen($this->username) >= 2 && strlen($this->message) >= 5 && strlen($this->visit) >= 2;
     }
 
     public function toHTML(): string {

@@ -73,9 +73,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>New Message</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/b0a60d99d5.js" crossorigin="anonymous"></script>
-    <!-- font awesome icons -->
     <!-- style -->
     <style>
         .wrapper{
@@ -93,10 +90,10 @@ include_once('header.php');
 <body>
     <div class="wrapper">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="mt-5">Write new message</h2>
-                    <p>Please fill this form and submit.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-sm-10">
+                    <h2 class="mt-5">Write a new message</h2>
+                    <p>Please fill in this form and submit.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
   
                     <!-- date form -->
@@ -116,8 +113,10 @@ include_once('header.php');
                         <textarea name="message" placeholder="Write your message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
                         <span class="invalid-feedback"><?php echo $message_err;?></span>
                     </div>
-                    <input type="submit" class="btn btn-warning" value="Submit">
+                    <div class="mt-4">
+                    <input type="submit" class="btn btn-warning text-white" value="Submit">
                     <a href="index.php" class="btn btn-danger ml-2">Cancel</a>
+                    </div>
                     </form>
                 </div>
             </div>        

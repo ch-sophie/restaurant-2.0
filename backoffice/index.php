@@ -34,9 +34,9 @@ include_once('header.php');
     <!-- <div class="wrapper"> -->
     <div class="container g-5 p-3">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-10">
                 <div class="mt-5 mb-3 clearfix">
-                    <h2 class="pull-left">Messages</h2>
+                    <h2 class="pull-left">Messages <i class="fa-regular fa-envelope-open"></i></h2>
                     <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add new message</a>
                 </div>
     <?php

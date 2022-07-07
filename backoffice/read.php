@@ -63,8 +63,8 @@ include_once('header.php');
 <body>
     <div class="wrapper">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-sm-10">
                     <h1 class="mt-5 mb-3">View Record</h1>
                     <div class="form-group">
                         <label>Name: </label>

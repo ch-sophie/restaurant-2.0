@@ -54,7 +54,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
-                // Records updated successfully. Redirect to landing page
+                // Records updated successfully. Redirect to home page
                 header("location: index.php");
                 exit();
             } else{

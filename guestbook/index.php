@@ -19,17 +19,20 @@ $title = "Guest Book";
 include_once('elements/header.php');
 ?>
 
-<div class="container">
-    <h1>Guest Book</h1>
+<div class="container g-5 p-3">
+    <h1>Guest book  <i class="fa-solid fa-book-open fa-2xs"></i></h1>
     <form action="" method="post">
         <div class="form-group mb-3">
             <input type="text" name="username" placeholder="Name" class="form-control">
         </div>
+
         <div class="form-group mb-3">
             <textarea name="message" placeholder="Leave your comment here" class="form-control"></textarea>
         </div>
+
         <div class="form-group mb-3">
-            <input type="text" name="visit" placeholder="Visited restaurant" class="form-control">
+            <input type="text" name="visit" placeholder="Which cafe did you visit?" class="form-control">
+        </div>
         <button class="btn btn-warning mt-3">Send message</button>
     </form>
 
@@ -38,8 +41,8 @@ include_once('elements/header.php');
         <?= $message->toHTML()?>
     <?php endforeach ?>
 
-</div>
-
 <?php
 require_once ('elements/footer.php');
 ?>
+
+</div>
