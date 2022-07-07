@@ -1,0 +1,1 @@
+CREATE TABLE `form_table`.`account` ( `id` INT NOT NULL AUTO_INCREMENT , `date` DATE NOT NULL , `name` VARCHAR(256) NOT NULL , `email` VARCHAR(256) NOT NULL , `message` VARCHAR(256) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

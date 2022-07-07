@@ -5,7 +5,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     require_once "config.php";
     
     // Prepare a delete statement
-    $sql = "DELETE FROM employees WHERE id = :id";
+    $sql = "DELETE FROM account WHERE id = :id";
     
     if($stmt = $pdo->prepare($sql)){
         // Bind variables to the prepared statement as parameters
@@ -26,9 +26,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
      
     // Close statement
     unset($stmt);
-    
     // Close connection
     unset($pdo);
+
 } else{
     // Check existence of id parameter
     if(empty(trim($_GET["id"]))){
@@ -39,12 +39,12 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 }
 ?>
 
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delete Record</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Delete</title>
     <style>
         .wrapper{
             width: 600px;
@@ -52,6 +52,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         }
     </style>
 </head>
+<!-- header -->
+<?php include_once('header.php'); ?>
+
 <body>
     <div class="wrapper">
         <div class="container-fluid">
@@ -64,7 +67,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <p>Are you sure you want to delete this message?</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
-                                <a href="index.php" class="btn btn-secondary ml-2">No</a>
+                                <a href="index.php" class="btn btn-success ml-2">No</a>
                             </p>
                         </div>
                     </form>

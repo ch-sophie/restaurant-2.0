@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_NAME', 'demo');
+define('DB_NAME', 'form_table');
  
 /* Attempt to connect to MySQL database */
 try{
