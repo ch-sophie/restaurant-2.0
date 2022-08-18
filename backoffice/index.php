@@ -37,7 +37,7 @@ include_once('header.php');
             <div class="col-md-12 col-sm-10">
                 <div class="mt-5 mb-3 clearfix">
                     <h2 class="pull-left">Messages <i class="fa-regular fa-envelope-open"></i></h2>
-                    <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add new message</a>
+                    <a href="create.php" class="btn btn-warning pull-right"><i class="fa fa-plus"></i> Add new message</a>
                 </div>
     <?php
     // Include config file
@@ -46,11 +46,10 @@ include_once('header.php');
     $sql = "SELECT * FROM account";
     if($result = $pdo->query($sql)){
     if($result->rowCount() > 0){
-    echo '<table class="table table-bordered table-striped">';
+    echo '<table class="table table-responsive-sm table-bordered table-striped">';
         echo "<thead>";
             echo "<tr>";
                 echo "<th>#</th>";
-                // date
                 echo "<th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Message</th>";
@@ -61,14 +60,13 @@ include_once('header.php');
             while($row = $result->fetch()){
                 echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
-                    // date
                     echo "<td>" . $row['name'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>" . $row['message'] . "</td>";
                     echo "<td>";
                     // icons view - edit - delete // 
                     echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                    echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Edit" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                    // echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Edit" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                     echo '<a href="delete.php?id='. $row['id'] .'" title="Delete" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                     echo "</td>";
                 echo "</tr>";

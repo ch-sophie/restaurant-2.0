@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- header -->
-    <div class="container g-5 p-3">
+    <div class="container g-5 p-1">
       <nav class="navbar my-3 navbar-expand-sm navbar-expand-md bg-warning">
         <div class="container-fluid">
           <a href="https://ch-sophie.github.io/restaurant-css-framework/Welcome" class="navbar-brand fw-semibold text-light"><i class="fa-solid fa-dice"></i> Soookies </a>
@@ -27,7 +27,7 @@
               <a class="nav-link text-white fw-semibold" href="https://ch-sophie.github.io/restaurant-css-framework/Menu">Menu</a>
               <a class="nav-link text-white fw-semibold" href="https://ch-sophie.github.io/restaurant-css-framework/gallery">Gallery</a>
               <a class="nav-link text-white fw-semibold" href="https://ch-sophie.github.io/restaurant-css-framework/restaurant">Locations</a>
-              <a class="nav-link text-white fw-semibold" href="https://ch-sophie.github.io/restaurant-css-framework/contact">Contact</a>
+              <a class="nav-link text-white fw-semibold" href="../contact/index.php">Contact</a>
             </div>
           </div>
         </div>

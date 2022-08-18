@@ -50,7 +50,7 @@
   // servername => localhost
   $conn = mysqli_connect("localhost", "root", "root", "back_office");
 
-  // Check connection
+  // // Check connection
   if($conn === false){
     die("ERROR: Could not connect. "
         . mysqli_connect_error());
@@ -63,15 +63,15 @@
   $textarea = $_REQUEST['textarea'];
 
   // Performing insert query execution
-  // $sql = "INSERT INTO messages(firstname, email, message) VALUES ('$first_name', '$email', '$textarea')";
+  $sql = "INSERT INTO messages(firstname, email, message) VALUES ('$first_name', '$email', '$textarea')";
 
-  // if(mysqli_query($conn, $sql)){
-  //   echo "<hr><h6>Data stored in a database successfully.</h6>";
-  //   echo nl2br("Date: $date\n Name:  $first_name\n Email: $email\n Message: $textarea");
-  // } else{
-  //     echo "Hush! Sorry $sql. "
-  //     . mysqli_error($conn);
-  // }
+  if(mysqli_query($conn, $sql)){
+    echo "<hr><h6>Data stored in a database successfully.</h6>";
+    echo nl2br("Date: $date\n Name:  $first_name\n Email: $email\n Message: $textarea");
+  } else{
+      echo "Hush! Sorry $sql. "
+      . mysqli_error($conn);
+  }
   ?>
 
 

@@ -1,6 +1,7 @@
+
 <?php
 // Include config file
-require_once('config.php');
+require_once('../backoffice/config.php');
 // Define variables and initialize with empty values
 $name = $email = $message = "";
 $name_err = $email_err = $message_err = "";
@@ -84,38 +85,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!-- header -->
 <?php
-include_once('header.php'); 
+include_once('../backoffice/header.php'); 
 ?>
 
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-sm-10">
-                    <h2 class="mt-5">Write a new message</h2>
+                <div class="col-6 col-md-8 col-sm-8 col-lg-10">
+                    <h2 class="mt-5">Send us a message</h2>
                     <p>Please fill in this form and submit.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-  
-                    <!-- date form -->
 
-                    <div class="form-group">
+                    <div class="form-group my-2">
                         <label>Name</label>
                         <input type="text" name="name" placeholder="Name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                         <span class="invalid-feedback"><?php echo $name_err;?></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-2">
                         <label>Email</label>
                         <input type="text" name="email" placeholder="Email Address" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
                         <span class="invalid-feedback"><?php echo $email_err;?></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-2">
                         <label>Message</label>
                         <textarea name="message" placeholder="Write your message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
                         <span class="invalid-feedback"><?php echo $message_err;?></span>
                     </div>
-                    <div class="mt-4">
+                    <div class="mt-4 my-4">
                     <input type="submit" class="btn btn-warning text-white" value="Submit">
-                    <a href="index.php" class="btn btn-danger ml-2">Cancel</a>
+                    <a href="../backoffice/index.php" class="btn btn-danger ml-2">Cancel</a>
                     </div>
                     </form>
                 </div>
@@ -124,8 +123,9 @@ include_once('header.php');
     </div>
     
     <?php
-require_once ('footer.php');
-?>
+    require_once ('../backoffice/footer.php');
+    ?>
+
 </div>
 </body>
 </html>

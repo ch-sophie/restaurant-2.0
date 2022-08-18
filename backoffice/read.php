@@ -66,6 +66,7 @@ include_once('header.php');
             <div class="row justify-content-center">
                 <div class="col-md-12 col-sm-10">
                     <h1 class="mt-5 mb-3">View Record</h1>
+                    <!-- date form -->
                     <div class="form-group">
                         <label>Name: </label>
                         <p><b><?php echo $row["name"]; ?></b></p>
